@@ -9,4 +9,4 @@
     owner: root
     group: wheel
     mode: '0644'
-    notify: restart isc-dhcpd
+   notify: restart isc-dhcpd
