@@ -2,34 +2,11 @@
  - name: ensure common packages
    package: name=ca_root_nss,git,htop,vim-tiny,python3 state=present
 
- - name: Write motd
+ - name: ensure dhcpd config
    template:
-    src: motd
-    dest: /etc/motd
+    src: dhcpd.conf
+    dest: /usr/local/etc/dhcpd.conf
     owner: root
     group: wheel
     mode: '0644'
-
- - name: ensure sshd_config
-   template:
-    src: sshd_config
-    dest: /etc/ssh/sshd_config
-    owner: root
-    group: wheel
-    mode: '0644'
-
- - name: write vimrc
-   template:
-    src: vimrc
-    dest: /root/.vimrc
-    owner: root
-    group: wheel
-    mode: '0644'
-
- - name: enable del for root
-   template:
-    src: cshrc
-    dest: /root/.cshrc
-    owner: root
-    group: wheel
-    mode: '0644'
+   notify: restart isc-dhcpd
