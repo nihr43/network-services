@@ -1,0 +1,16 @@
+---
+ - hosts: freebsd_common
+   roles:
+    - freebsd_common
+
+ - hosts: gateways
+   roles:
+    - carp_gateway
+
+ - hosts: dhcpservers
+   roles:
+    - split_dhcp
+
+ - hosts: nameservers
+   roles:
+    - ddns
