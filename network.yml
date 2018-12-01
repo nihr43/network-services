@@ -3,14 +3,26 @@
    roles:
     - freebsd_common
 
- - hosts: gateways
+ - hosts: gateway-a
    roles:
-    - carp_gateway
+    - gateway-a
 
- - hosts: dhcpservers
+ - hosts: gateway-b
    roles:
-    - split_dhcp
+    - gateway-b
 
- - hosts: nameservers
+ - hosts: dhcp-a
    roles:
-    - ddns
+    - dhcp-a
+
+ - hosts: dhcp-b
+   roles:
+    - dhcp-b
+
+ - hosts: named-a
+   roles:
+    - named-a
+
+ - hosts: named-b
+   roles:
+    - named-b

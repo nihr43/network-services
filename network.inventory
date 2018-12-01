@@ -1,20 +1,28 @@
 [freebsd_common:children]
-gateways
-nameservers
-dhcpservers
+gateway-a
+gateway-b
+dhcp-a
+dhcp-b
+named-a
+named-b
 
-[gateways]
+[gateway-a]
 10.0.1.249
+
+[gateway-b]
 10.0.1.250
 
-[dhcpservers]
+[dhcp-a]
 10.0.1.251
+
+[dhcp-b]
 10.0.1.252
 
-[nameservers]
+[named-a]
 10.0.1.253
-10.0.1.254
 
+[named-b]
+10.0.1.254
 
 [freebsd_common:vars]
 ansible_python_interpreter=/usr/local/bin/python3.6
