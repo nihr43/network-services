@@ -1,6 +1,5 @@
 [freebsd_common:children]
 #gateway-a
-#gateway-b
 dhcp-servers
 #named-a
 #named-b

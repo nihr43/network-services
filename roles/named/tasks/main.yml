@@ -1,0 +1,27 @@
+---
+ - name: ensure bind9 packages
+   package: name=bind913 state=present
+
+ - name: ensure named config
+   template:
+    src: named.conf
+    dest: /usr/local/etc/namedb/named.conf
+    owner: root
+    group: wheel
+    mode: '0644'
+   notify: restart named
+
+ - name: ensure zone config
+   template:
+    src: mydomain.zone
+    dest: /usr/local/etc/namedb/dynamic/mydomain.zone
+    owner: bind
+    group: bind
+    mode: '0644'
+   notify: restart named
+
+ - lineinfile:
+    path: /etc/rc.conf
+    regexp: '^named_enable='
+    line: 'named_enable="YES"'
+   notify: restart named
