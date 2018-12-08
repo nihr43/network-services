@@ -1,0 +1,16 @@
+---
+ - name: ensure common packages
+   package: name=ca_root_nss,git,htop,vim-tiny,python3 state=present
+
+ - name: ensure dhcpd config
+   template:
+    src: dhcpd.conf
+    dest: /usr/local/etc/dhcpd.conf
+    owner: root
+    group: wheel
+    mode: '0644'
+   notify: restart isc-dhcpd
+
+ - name: debug
+   debug:
+     msg: ansible_hostname
