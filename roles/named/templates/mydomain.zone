@@ -7,5 +7,5 @@ mydomain                IN SOA  ns0.mydomain. hostmaster.mydomain. (
                                 604800     ; expire (1 week)
                                 86400      ; minimum (1 day)
                                 )
-10.0.0.253		NS      ns0.mydomain.
+			NS      ns0.mydomain.
 ns0			A	10.0.0.253
