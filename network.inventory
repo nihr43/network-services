@@ -12,7 +12,7 @@ dhcp-servers
 #10.0.1.250
 
 [dhcp-servers]
-10.0.0.251
+#10.0.0.251
 10.0.0.252
 
 [name-servers]
