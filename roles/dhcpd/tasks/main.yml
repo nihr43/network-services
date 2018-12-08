@@ -11,8 +11,8 @@
     mode: '0644'
    notify: restart isc-dhcpd
 
-- lineinfile:
+ - lineinfile:
     path: /etc/rc.conf
     regexp: '^isc-dhcpd_enabled='
     line: 'isc-dhcpd_enabled="YES"'
-  notify: restart isc-dhcpd
+   notify: restart isc-dhcpd
