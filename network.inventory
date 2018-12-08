@@ -13,7 +13,7 @@ dhcp-servers
 
 [dhcp-servers]
 #10.0.0.251
-10.0.0.252
+10.0.0.252 range_start=10.0.0.50 range_end=10.0.0.99
 
 [name-servers]
 #10.0.1.253
