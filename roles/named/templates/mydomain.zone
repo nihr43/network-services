@@ -8,4 +8,4 @@ mydomain                IN SOA  ns0.mydomain. hostmaster.mydomain. (
                                 86400      ; minimum (1 day)
                                 )
 			NS      ns0.mydomain.
-ns0			A	10.0.0.253
+ns0.mydomain		A	10.0.0.253
