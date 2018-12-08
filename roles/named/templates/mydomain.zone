@@ -9,6 +9,3 @@ mydomain                IN SOA  ns0.mydomain. hostmaster.mydomain. (
                                 )
                         NS      ns0.mydomain.
                         NS      ns1.mydomain.
-
-ns0                     A       10.0.0.253
-ns1                     A       10.0.0.254
