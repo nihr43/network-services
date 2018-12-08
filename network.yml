@@ -11,18 +11,10 @@
    roles:
     - gateway-b
 
- - hosts: dhcp-a
+ - hosts: dhcp-servers
    roles:
-    - dhcp-a
+    - dhcpd
 
- - hosts: dhcp-b
+ - hosts: name-servers
    roles:
-    - dhcp-b
-
- - hosts: named-a
-   roles:
-    - named-a
-
- - hosts: named-b
-   roles:
-    - named-b
+    - named
