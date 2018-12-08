@@ -13,6 +13,6 @@
 
  - lineinfile:
     path: /etc/rc.conf
-    regexp: '^isc-dhcpd_enabled='
-    line: 'isc-dhcpd_enabled="YES"'
+    regexp: '^dhcpd_enable='
+    line: 'dhcpd_enable="YES"'
    notify: restart isc-dhcpd
