@@ -14,3 +14,4 @@
  - name: debug
    debug:
      msg: "{{ ansible_hostname }}"
+   when: "'dhcp1' in {{ ansible_hostname }}"
