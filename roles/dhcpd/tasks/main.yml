@@ -1,6 +1,6 @@
 ---
- - name: ensure common packages
-   package: name=ca_root_nss,git,htop,vim-tiny,python3 state=present
+ - name: ensure dhcpd packages
+   package: name=isc-dhcp44-server state=present
 
  - name: ensure dhcpd config
    template:
@@ -11,7 +11,8 @@
     mode: '0644'
    notify: restart isc-dhcpd
 
- - name: debug
-   debug:
-     msg: "{{ ansible_hostname }}"
-   when: "'dhcp1' in ansible_hostname"
+- lineinfile:
+    path: /etc/rc.conf
+    regexp: '^isc-dhcpd_enabled='
+    line: 'isc-dhcpd_enabled="YES"'
+  notify: restart isc-dhcpd
