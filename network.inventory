@@ -16,7 +16,7 @@ name-servers
 
 [name-servers]
 10.0.0.253
-10.0.0.254
+#10.0.0.254
 
 [freebsd_common:vars]
 ansible_python_interpreter=/usr/local/bin/python3.6
