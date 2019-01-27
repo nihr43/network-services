@@ -11,12 +11,11 @@ name-servers
 #10.0.1.250
 
 [dhcp-servers]
-10.0.0.251 range_start=10.0.0.20 range_end=10.0.0.99
-10.0.0.252 range_start=10.0.0.100 range_end=10.0.0.179
+#10.0.0.251 range_start=10.0.0.20 range_end=10.0.0.99
+#10.0.0.252 range_start=10.0.0.100 range_end=10.0.0.179
 
 [name-servers]
-10.0.0.253
-#10.0.0.254
+10.0.0.1
 
 [freebsd_common:vars]
 ansible_python_interpreter=/usr/local/bin/python3.6
